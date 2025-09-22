@@ -63,3 +63,9 @@ FOREIGN KEY  (id_servico) REFERENCES servicos(id_servico)
 ) default charset = utf8;
 
  
+INSERT INTO produtos (nome_produto, id_marca, preco, estoque)
+values 
+('Pomada Matte Premium', 33, 50.00, 20),
+('Pomada Brilho intenso', 34, 50.00, 20),
+('Pomada Efeito Teia', 35, 50.00, 20),
+('Minoxidil 15%', 35, 60.00, 50);
