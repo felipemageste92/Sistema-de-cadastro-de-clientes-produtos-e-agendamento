@@ -50,4 +50,16 @@ CREATE database IF NOT EXISTS barbearia;
  observacoes TEXT,
  FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
  ) DEFAULT CHARSET = utf8;
+
+
+CREATE TABLE IF NOT EXISTS agendamento_servicos(
+id_agendamento_serviço INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_agendamento INT NOT NULL,
+id_servico INT NOT NULL,
+preco_servico DECIMAL(10,2) NOT NULL,
+FOREIGN KEY (id_agendamento) REFERENCES agendamentos(id_agendamento),
+FOREIGN KEY  (id_servico) REFERENCES servicos(id_servico)
+
+) default charset = utf8;
+
  
